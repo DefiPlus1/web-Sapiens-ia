@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soluciones | Sapiens-ia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00fa9a",
+                        "background-light": "#f5f8f7",
+                        "background-dark": "#061121",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 250, 154, 0.1) 0%, rgba(6, 17, 33, 1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-background-dark">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight uppercase">Sapiens-ia</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Soluciones</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Casos de Éxito</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sobre Nosotros</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Blog</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-background-dark px-6 py-2.5 rounded-lg text-sm font-bold transition-transform active:scale-95 hover:shadow-[0_0_20px_rgba(0,250,154,0.3)]">
+                    Agendar Auditoría
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-20 overflow-hidden hero-gradient">
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+<span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
+                    Propuestas de Valor
+                </span>
+<h1 class="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">
+                    Nuestras <span class="text-primary italic">Soluciones</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg text-slate-400 font-light leading-relaxed">
+                    Potenciando la evolución humana a través de inteligencia artificial estratégica, 
+                    diseñada para la escala empresarial y el impacto real.
+                </p>
+</div>
+<!-- Decorative blur -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-0"></div>
+</section>
+<!-- Main Services Section -->
+<section class="py-20 max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 gap-12">
+<!-- Service Card 1: Automatización -->
+<div class="group relative grid md:grid-cols-2 gap-12 items-center p-8 md:p-12 rounded-2xl glass-card overflow-hidden transition-all hover:border-primary/20">
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl leading-none">precision_manufacturing</span>
+<h2 class="text-3xl font-bold tracking-tight">Automatización de Operaciones</h2>
+</div>
+<p class="text-slate-400 mb-8 text-lg leading-relaxed">
+                            Transformamos procesos manuales y complejos en flujos de trabajo autónomos. Nuestra IA optimiza la cadena de suministro, finanzas y logística para maximizar el ROI.
+                        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">bolt</span>
+<div>
+<h4 class="font-bold text-sm">Eficiencia Crítica</h4>
+<p class="text-xs text-slate-500">Reducción del 40% en tiempos de respuesta.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+<div>
+<h4 class="font-bold text-sm">Cero Errores</h4>
+<p class="text-xs text-slate-500">Precisión algorítmica en tareas repetitivas.</p>
+</div>
+</div>
+</div>
+<button class="flex items-center gap-2 group/btn text-sm font-bold uppercase tracking-wider text-primary">
+                            Explorar Solución <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<div class="relative aspect-video rounded-xl overflow-hidden border border-white/10">
+<img alt="Business efficiency automation" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Abstract visualization of industrial automation and data flows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQXtsVc11Ib2LveDILOhPPXhl0KXK-jgN-ywN4iZxSMuTNrx_wjaKISAOKI_a-zW1jRfKFLqIFWcWgGmGZQTg553tx0vEfvE0VWTgn_MefE_KkzqL8krpBulho6tFaQkD88euX62RbMRAaYYA-sop3JGB76FYRh3eNueZDKBn2ZzK9uXdzTYHZo-XEB6PuDtl1PaVZcqy8e3U_J2bmcaxvW_kj8s0wuozmZ0sFYHx4EnIOJ-p6bh7d9JlOVEmMorK-0bpnDLLfi4ex"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+</div>
+</div>
+<!-- Service Card 2: Customer Support -->
+<div class="group relative grid md:grid-cols-2 gap-12 items-center p-8 md:p-12 rounded-2xl glass-card overflow-hidden transition-all hover:border-primary/20">
+<div class="order-2 md:order-1 relative aspect-video rounded-xl overflow-hidden border border-white/10">
+<img alt="Intelligent AI Agents" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Futuristic digital interface representing conversational AI and agents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ2wQETnNNdywQSHo6McjnwCcc1B7DsNGIfO5HT759PEZSmXinrD9NMSt7oj4ZA9UaZJmzDtR_Rn3xQXLDFB_dqekOjHuIH0gDL7sCzYlcCJ4I3jQ1GAhqz_AAkwXGfMTAjJz4jYXvs6v8xiyvpMqEPvnkB5Pfo1zWXmJwFxuxYaf62pCBoFeljvjnOuhv8FlyRSw_fWfGVFXjUONMTUYBnlP7BoSh1e9ifZgZdYS_60_P1PiHeiYupm91HEczrE9KGGjmUunCILVb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+</div>
+<div class="order-1 md:order-2 relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl leading-none">neurology</span>
+<h2 class="text-3xl font-bold tracking-tight">Agentes Inteligentes</h2>
+</div>
+<p class="text-slate-400 mb-8 text-lg leading-relaxed">
+                            Sistemas de atención al cliente de próxima generación. Nuestros agentes autónomos entienden el contexto, la intención y la emoción para ofrecer experiencias fluidas 24/7.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                Multicanalidad nativa (Voz, Chat, Correo)
+                            </li>
+<li class="flex items-center gap-3 text-sm text-slate-300">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                Integración profunda con CRMs (Salesforce, HubSpot)
+                            </li>
+</ul>
+<button class="flex items-center gap-2 group/btn text-sm font-bold uppercase tracking-wider text-primary">
+                            Solicitar Demo <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Service Card 3: Data Infrastructure -->
+<div class="group relative grid md:grid-cols-2 gap-12 items-center p-8 md:p-12 rounded-2xl glass-card overflow-hidden transition-all hover:border-primary/20">
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl leading-none">database</span>
+<h2 class="text-3xl font-bold tracking-tight">Infraestructura de Datos &amp; IA</h2>
+</div>
+<p class="text-slate-400 mb-8 text-lg leading-relaxed">
+                            La base de la inteligencia. Diseñamos ecosistemas de datos robustos y seguros que alimentan sus modelos de IA, garantizando soberanía de datos y escalabilidad total.
+                        </p>
+<div class="flex gap-4 mb-10">
+<div class="px-4 py-2 bg-white/5 rounded-lg text-xs font-mono text-slate-300">Data Lakes</div>
+<div class="px-4 py-2 bg-white/5 rounded-lg text-xs font-mono text-slate-300">MLOps</div>
+<div class="px-4 py-2 bg-white/5 rounded-lg text-xs font-mono text-slate-300">Privacidad</div>
+</div>
+<button class="flex items-center gap-2 group/btn text-sm font-bold uppercase tracking-wider text-primary">
+                            Ver Arquitectura <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<div class="relative aspect-video rounded-xl overflow-hidden border border-white/10">
+<img alt="Data management backbone" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Server racks and data centers with glowing neon green highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIP8sf9HVYXVbDvJJw54_WJWjnPfWXhwaMZ7CQDaJpCKQNcbqXE6c_ppvfRyq3CjRChF3txfKZlD-__vQs62HmFKJIUm0iJOiqTZCPREjYGxeL6Z1ErlBAWmD7vXsPlDOLk7loR8drLMunYS90uTuvLU0YcBnF81eQv793R3Ej8n3eVOesF7AJYOsccgB62ns3t0yDJXcHoAKMhSGEXMButp7K_0M6YtCIaLZ1uUzIRCkKDv5e_g6PoIFUa4xYMtQpgmHCKkzAOc0m"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary/5 border-y border-white/5">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h3 class="text-4xl font-bold mb-6 tracking-tight">¿Listo para evolucionar su modelo de negocio?</h3>
+<p class="text-slate-400 mb-10 text-lg">Hablemos sobre cómo nuestras soluciones pueden integrarse en su ecosistema actual.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-10 py-4 bg-primary text-background-dark font-bold rounded-lg hover:shadow-[0_0_30px_rgba(0,250,154,0.4)] transition-all">
+                        Solicitar Auditoría Gratuita
+                    </button>
+<button class="w-full sm:w-auto px-10 py-4 border border-white/10 hover:bg-white/5 font-bold rounded-lg transition-all">
+                        Hablar con un Experto
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark pt-20 pb-10 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary mb-6">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-lg font-bold tracking-tight text-white uppercase">Sapiens-ia</span>
+</div>
+<p class="text-sm text-slate-500 leading-relaxed mb-6">
+                        Liderando la transición hacia un futuro donde la inteligencia artificial y la humanidad colaboran sin fricciones.
+                    </p>
+<div class="flex gap-4">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Soluciones</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Automatización</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Agentes IA</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Data Strategy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Consultoría</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Compañía</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Sobre Nosotros</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Carreras</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Newsletter</h5>
+<p class="text-xs text-slate-500 mb-4 italic">Recibe insights sobre IA cada semana.</p>
+<div class="flex flex-col gap-2">
+<input class="bg-white/5 border-white/10 rounded-lg text-sm px-4 py-2 focus:border-primary focus:ring-0" placeholder="email@sapiens-ia.com" type="email"/>
+<button class="bg-primary/20 text-primary border border-primary/30 py-2 rounded-lg text-xs font-bold uppercase hover:bg-primary/30 transition-all">Suscribirme</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+<p>© 2024 Sapiens-ia. Todos los derechos reservados.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="hover:text-white transition-colors" href="#">Términos</a>
+<a class="hover:text-white transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

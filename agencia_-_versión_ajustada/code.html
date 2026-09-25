@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sapiens-ia | Nuestra Visión y Stack Tecnológico</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00fa9a",
+                        "background-light": "#f5f8f7",
+                        "background-dark": "#061121",
+                        "silver-silk": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-card {
+            background: rgba(6, 17, 33, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 250, 154, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 250, 154, 0.08) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-[#061121] text-white min-h-screen selection:bg-primary selection:text-[#061121]">
+<!-- Navigation Bar -->
+<nav class="sticky top-0 z-50 w-full border-b border-primary/10 bg-[#061121]/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">neurology</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-100 uppercase">Sapiens-ia</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Visión</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Stack</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Metodología</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-background-dark px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide hover:brightness-110 transition-all uppercase">
+                    Agendar Auditoría
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 overflow-hidden hero-gradient">
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-bold tracking-[0.2em] uppercase mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                El Futuro es Humano
+            </div>
+<h1 class="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-[1.1] text-white">
+                Nuestra Visión: <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00fa9a] to-emerald-400">Expandiendo el Potencial</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-12">
+                Diseñamos el puente entre la intuición humana y la inteligencia artificial para desbloquear nuevas fronteras de innovación. No reemplazamos al humano; lo potenciamos.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary text-background-dark font-bold rounded-lg hover:scale-105 transition-transform">
+                    Explorar Soluciones
+                </button>
+<button class="w-full sm:w-auto px-8 py-4 border border-primary/20 bg-primary/5 text-primary font-bold rounded-lg hover:bg-primary/10 transition-all">
+                    Ver Manifiesto
+                </button>
+</div>
+</div>
+<!-- Abstract Background Pattern (IMAGE_3 inspiration) -->
+<div class="absolute inset-0 -z-10 opacity-20 pointer-events-none overflow-hidden">
+<svg class="absolute w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<defs>
+<lineargradient id="lineGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#00fa9a" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="transparent" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0 100 L100 0" fill="none" stroke="url(#lineGrad)" stroke-width="0.05"></path>
+<path d="M0 80 L80 0" fill="none" stroke="url(#lineGrad)" stroke-width="0.05"></path>
+<path d="M20 100 L100 20" fill="none" stroke="url(#lineGrad)" stroke-width="0.05"></path>
+<circle cx="50" cy="50" fill="none" r="40" stroke="url(#lineGrad)" stroke-width="0.1"></circle>
+</svg>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#061121_70%)]"></div>
+</div>
+</section>
+<!-- Tech Stack Section -->
+<section class="py-24 bg-[#061121]/50 border-y border-primary/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-3xl font-bold mb-4 text-white">Nuestro Stack Tecnológico</h2>
+<p class="text-slate-400 max-w-xl">Utilizamos las herramientas más avanzadas en el ecosistema de IA y desarrollo moderno para garantizar escalabilidad, seguridad y eficiencia.</p>
+</div>
+<div class="flex gap-2">
+<div class="h-1 w-12 bg-primary rounded-full"></div>
+<div class="h-1 w-4 bg-primary/30 rounded-full"></div>
+<div class="h-1 w-4 bg-primary/30 rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Python -->
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center gap-4 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">terminal</span>
+</div>
+<div class="text-center">
+<h3 class="font-bold group-hover:text-primary transition-colors text-white">Python</h3>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Core AI Dev</p>
+</div>
+</div>
+<!-- TensorFlow -->
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center gap-4 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">hub</span>
+</div>
+<div class="text-center">
+<h3 class="font-bold group-hover:text-primary transition-colors text-white">TensorFlow</h3>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Neural Networks</p>
+</div>
+</div>
+<!-- OpenAI -->
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center gap-4 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">psychology</span>
+</div>
+<div class="text-center">
+<h3 class="font-bold group-hover:text-primary transition-colors text-white">OpenAI</h3>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">LLM Models</p>
+</div>
+</div>
+<!-- React -->
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center gap-4 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">view_quilt</span>
+</div>
+<div class="text-center">
+<h3 class="font-bold group-hover:text-primary transition-colors text-white">React</h3>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">UX Interfaces</p>
+</div>
+</div>
+<!-- AWS -->
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center gap-4 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">cloud</span>
+</div>
+<div class="text-center">
+<h3 class="font-bold group-hover:text-primary transition-colors text-white">AWS</h3>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Infrastructure</p>
+</div>
+</div>
+<!-- Docker -->
+<div class="glass-card p-8 rounded-xl flex flex-col items-center justify-center gap-4 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">package</span>
+</div>
+<div class="text-center">
+<h3 class="font-bold group-hover:text-primary transition-colors text-white">Docker</h3>
+<p class="text-xs text-slate-500 uppercase tracking-widest mt-1">Deployment</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology Section -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold mb-6 text-white">Metodología de Innovación</h2>
+<div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="relative">
+<!-- Vertical Line (Desktop) -->
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-primary/10 -translate-x-1/2 hidden md:block"></div>
+<div class="space-y-12 md:space-y-0">
+<!-- Step 1 -->
+<div class="relative md:flex items-center justify-between group">
+<div class="md:w-[45%] mb-8 md:mb-0">
+<div class="glass-card p-8 rounded-xl border-l-4 border-l-primary group-hover:-translate-y-1 transition-transform">
+<span class="text-primary font-bold text-sm tracking-widest uppercase block mb-4">Paso 01</span>
+<h3 class="text-2xl font-bold mb-4 text-white">Descubrimiento</h3>
+<p class="text-slate-400">Analizamos el núcleo humano de tu negocio. Identificamos cuellos de botella y oportunidades donde la IA puede generar un impacto exponencial sin perder la esencia de tu marca.</p>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 hidden md:flex h-10 w-10 rounded-full border border-primary bg-background-dark items-center justify-center z-10 shadow-[0_0_15px_rgba(0,250,154,0.3)]">
+<span class="material-symbols-outlined text-primary text-xl">search</span>
+</div>
+<div class="md:w-[45%]"></div>
+</div>
+<!-- Step 2 -->
+<div class="relative md:flex items-center justify-between group">
+<div class="md:w-[45%] order-2 mb-8 md:mb-0">
+<div class="glass-card p-8 rounded-xl border-r-4 border-r-primary group-hover:-translate-y-1 transition-transform">
+<span class="text-primary font-bold text-sm tracking-widest uppercase block mb-4">Paso 02</span>
+<h3 class="text-2xl font-bold mb-4 text-white">Arquitectura</h3>
+<p class="text-slate-400">Diseñamos la infraestructura neuronal personalizada. No utilizamos soluciones genéricas; construimos modelos que aprenden y evolucionan con tus procesos específicos.</p>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 hidden md:flex h-10 w-10 rounded-full border border-primary bg-background-dark items-center justify-center z-10 shadow-[0_0_15px_rgba(0,250,154,0.3)]">
+<span class="material-symbols-outlined text-primary text-xl">architecture</span>
+</div>
+<div class="md:w-[45%] order-1"></div>
+</div>
+<!-- Step 3 -->
+<div class="relative md:flex items-center justify-between group">
+<div class="md:w-[45%] mb-8 md:mb-0">
+<div class="glass-card p-8 rounded-xl border-l-4 border-l-primary group-hover:-translate-y-1 transition-transform">
+<span class="text-primary font-bold text-sm tracking-widest uppercase block mb-4">Paso 03</span>
+<h3 class="text-2xl font-bold mb-4 text-white">Implementación</h3>
+<p class="text-slate-400">Despliegue fluido de inteligencia. Integramos las soluciones en tu flujo de trabajo diario, capacitando a tu equipo para colaborar armoniosamente con las nuevas herramientas.</p>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 hidden md:flex h-10 w-10 rounded-full border border-primary bg-background-dark items-center justify-center z-10 shadow-[0_0_15px_rgba(0,250,154,0.3)]">
+<span class="material-symbols-outlined text-primary text-xl">rocket_launch</span>
+</div>
+<div class="md:w-[45%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="py-24">
+<div class="max-w-5xl mx-auto px-6">
+<div class="glass-card rounded-2xl p-12 relative overflow-hidden text-center border-primary/20">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+<h2 class="text-3xl md:text-5xl font-bold mb-6 relative z-10 text-white">¿Listo para evolucionar?</h2>
+<p class="text-slate-400 mb-10 text-lg relative z-10">Transforma tu organización con inteligencia diseñada para humanos.</p>
+<button class="relative z-10 px-10 py-5 bg-primary text-background-dark font-black rounded-lg hover:scale-105 transition-all text-lg uppercase tracking-wider">
+                    Solicitar Auditoría Gratuita
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#061121] border-t border-primary/10 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 bg-primary/10 rounded flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary text-xl">neurology</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-slate-100 uppercase">Sapiens-ia</span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        Redefiniendo el límite de lo posible a través de la colaboración entre mentes humanas y redes neuronales.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-white">Agencia</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Nuestra Visión</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Metodología</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Casos de Éxito</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-white">Soluciones</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Auditoría IA</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Desarrollo Custom</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Optimización de Stack</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Formación</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-white">Contacto</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> contact@sapiens-ia.tech</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">location_on</span> Silicon Valley / Madrid</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-600">© 2024 Sapiens-ia. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="text-slate-600 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">data_object</span></a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
