@@ -1,0 +1,10 @@
+{
+  "name": "web-sapiens-ia-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix Sapiens-ia_FinishedWeb/sapiens-web run dev",
+    "build": "npm --prefix Sapiens-ia_FinishedWeb/sapiens-web run build",
+    "start": "npm --prefix Sapiens-ia_FinishedWeb/sapiens-web start"
+  }
+}

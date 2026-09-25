@@ -87,12 +87,12 @@ export default function AgenciaPage() {
                                     con que la tecnología se entrelaza con la experiencia humana.&rdquo;
                                 </blockquote>
                                 <div className="flex items-center gap-3 pt-5 border-t border-white/5">
-                                    <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-2xl">
-                                        👤
+                                    <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center font-bold text-emerald-400 text-lg">
+                                        LY
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-white">Fundador & CEO</p>
-                                        <p className="text-xs text-slate-500">Sapiens-ia · Visión 2025</p>
+                                        <p className="font-semibold text-white">Leonardo Ytriago</p>
+                                        <p className="text-xs text-slate-400">Fundador & Lead AI Architect · Sapiens IA</p>
                                     </div>
                                 </div>
                             </div>
@@ -179,8 +179,8 @@ export default function AgenciaPage() {
                             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                 <div className="glass rounded-2xl px-8 py-4 border border-emerald-500/25 text-center backdrop-blur-xl">
                                     <Monitor size={28} className="text-emerald-400 mx-auto mb-2" />
-                                    <p className="text-sm font-bold text-white">Dashboard Privado</p>
-                                    <p className="text-xs text-slate-500">Mockup · Próximamente</p>
+                                    <p className="text-sm font-bold text-white">Sapiens IA Platform</p>
+                                    <p className="text-xs text-emerald-400 font-medium">Panel Operativo · Producción</p>
                                 </div>
                             </div>
                         </div>

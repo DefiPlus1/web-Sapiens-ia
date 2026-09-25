@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sapiens IA — Roadmap & Checklist Meta Tech Provider</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(17, 24, 39, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.25);
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --blue: #3b82f6;
+      --purple: #8b5cf6;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1.5rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #ffffff, #9ca3af);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .progress-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .progress-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .progress-percent {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+    .progress-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), #34d399);
+      border-radius: 9999px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 12px var(--accent-glow);
+    }
+    .section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+    .section-header {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 1px solid transparent;
+      transition: background 0.2s;
+    }
+    .section-header:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .icon-p1 { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+    .icon-p2 { background: rgba(245, 158, 11, 0.15); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+    .icon-p3 { background: rgba(59, 130, 246, 0.15); color: var(--blue); border: 1px solid rgba(59, 130, 246, 0.3); }
+    .icon-p4 { background: rgba(139, 92, 246, 0.15); color: var(--purple); border: 1px solid rgba(139, 92, 246, 0.3); }
+    .icon-p5 { background: rgba(16, 185, 129, 0.15); color: var(--accent); border: 1px solid rgba(16, 185, 129, 0.3); }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .section-badge {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+    .section-body {
+      padding: 1rem 1.5rem;
+    }
+    .task-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .task-item:last-child {
+      border-bottom: none;
+    }
+    .checkbox-wrap {
+      padding-top: 0.15rem;
+    }
+    .custom-checkbox {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      outline: none;
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      transition: all 0.2s;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .custom-checkbox:hover {
+      border-color: var(--accent);
+    }
+    .custom-checkbox:checked {
+      background-color: var(--accent);
+      border-color: var(--accent);
+    }
+    .custom-checkbox:checked::before {
+      content: "";
+      width: 10px;
+      height: 6px;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: rotate(-45deg) translate(1px, -1px);
+    }
+    .task-content {
+      flex: 1;
+    }
+    .task-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-bottom: 0.25rem;
+      transition: color 0.2s;
+    }
+    .task-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .task-desc code {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: #38bdf8;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .task-item.checked .task-title {
+      text-decoration: line-through;
+      color: #6b7280;
+    }
+    .alert-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 3px solid var(--danger);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #fca5a5;
+    }
+    .info-box {
+      background: rgba(59, 130, 246, 0.08);
+      border-left: 3px solid var(--blue);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #93c5fd;
+    }
+    .btn-reset {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-reset:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Meta Tech Provider & App Review</span>
+      <h1>Sapiens IA — Roadmap Interactivo</h1>
+      <p class="subtitle">Guía de blindaje anti-rechazo para Leonardo Ytriago (Persona Natural / Sole Proprietor) hacia la aprobación oficial en Meta Developers.</p>
+    </header>
+
+    <div class="progress-card">
+      <div class="progress-header">
+        <span class="progress-title">Progreso Total de Blindaje & Implementación</span>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <span class="progress-percent" id="progress-percent">0%</span>
+          <button class="btn-reset" onclick="resetProgress()">Reiniciar</button>
+        </div>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 1: ALINEACIÓN DOCUMENTAL Y PORTFOLIO -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon icon-p1">1</div>
+          <div>
+            <h2 class="section-title">Alineación de Datos Legales (OCR Anti-Rechazo)</h2>
+            <div class="section-badge">Meta Portfolio vs Documentos RIF</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="task-item" id="task-1">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-1')"></div>
+          <div class="task-content">
+            <div class="task-title">Corregir Nombre Legal en Meta Business Portfolio</div>
+            <div class="task-desc">Actualmente dice <code>Leo Ytriago ia</code>. Debe cambiarse exactamente a <code>LEONARDO JOSE YTRIAGO MANRRIQUEZ</code> tal como figura en el RIF.</div>
+            <div class="alert-box">🚨 Causa crítica de rechazo: El OCR de Meta rechaza diferencias de mayúsculas/minúsculas y omisiones de segundo nombre o apellido.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-2">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-2')"></div>
+          <div class="task-content">
+            <div class="task-title">Corregir Dirección Fiscal en Meta Portfolio</div>
+            <div class="task-desc">Actualmente dice <code>K13 HACIA EL JUNQUITO CARACAS</code>. Debe cambiarse exactamente a la del RIF: <code>CALLE SAN MIGUEL CASA NRO 12-2 SECTOR SAN MIGUEL VALLE DE LA PASCUA GUARICO ZONA POSTAL 2350</code>.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-3">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-3')"></div>
+          <div class="task-content">
+            <div class="task-title">Reemplazar URL de LinkedIn por Dominio Web Propio</div>
+            <div class="task-desc">En el Portfolio Comercial, el campo Sitio Web tiene el enlace a LinkedIn. Debe reemplazarse por <code>https://www.leoytriagoia.dev</code> o <code>https://leoytriagoia.dev</code>.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-4">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-4')"></div>
+          <div class="task-content">
+            <div class="task-title">Obtener Comprobante de Residencia Coincidente</div>
+            <div class="task-desc">Factura de servicio público (luz/CANTV) o estado de cuenta bancario a nombre de Leonardo Ytriago con la dirección de Valle de la Pascua (antigüedad &lt; 3 meses, PDF digital original).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 2: CONFIGURACIÓN DE LA APP DE META -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon icon-p2">2</div>
+          <div>
+            <h2 class="section-title">Limpieza y Configuración de "Leoia App"</h2>
+            <div class="section-badge">Meta App ID: 2114565835951415</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="task-item" id="task-5">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-5')"></div>
+          <div class="task-content">
+            <div class="task-title">Eliminar Enlaces de Google Drive para Políticas y Términos</div>
+            <div class="task-desc">Meta prohíbe enlaces a Google Drive. Reemplazar por <code>https://leoytriagoia.dev/privacidad</code> y <code>https://leoytriagoia.dev/terminos</code> una vez construidos.</div>
+            <div class="alert-box">🚨 Causa #1 de rechazo administrativo: El bot de Meta evalúa HTTP 200 con contenido público HTML. Google Drive bloquea el rastreo de bots.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-6">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-6')"></div>
+          <div class="task-content">
+            <div class="task-title">Eliminar URL de facebook.com en Eliminación de Datos</div>
+            <div class="task-desc">Actualmente está configurado con <code>https://www.facebook.com/</code>. Debe cambiarse a una página pública: <code>https://leoytriagoia.dev/eliminacion-de-datos</code>.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-7">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-7')"></div>
+          <div class="task-content">
+            <div class="task-title">Configurar Correo y Dominios de la App</div>
+            <div class="task-desc">Cambiar el correo de contacto a <code>contacto@leoytriagoia.dev</code> (usando Cloudflare Email Routing) y agregar <code>leoytriagoia.dev</code> en "Dominios de la app".</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 3: PÁGINA WEB (SAPIENS IA) -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon icon-p3">3</div>
+          <div>
+            <h2 class="section-title">Actualización del Sitio Web Sapiens IA</h2>
+            <div class="section-badge">Repo: web-Sapiens-ia (Next.js)</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="task-item" id="task-8">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-8')"></div>
+          <div class="task-content">
+            <div class="task-title">Vincular Legalmente Sapiens IA con Persona Natural en el Footer</div>
+            <div class="task-desc">Agregar el bloque legal: <em>"Sapiens IA es una marca operada por Leonardo José Ytriago Manrriquez, RIF V-17741920-2, Domicilio Fiscal: Calle San Miguel Casa Nro 12-2 Sector San Miguel, Valle de la Pascua, Guárico, ZP 2350, Venezuela."</em></div>
+            <div class="info-box">💡 Esto permite que mantengas la imagen comercial de Sapiens IA mientras cumples al 100% con los requisitos de verificación ante Meta.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-9">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-9')"></div>
+          <div class="task-content">
+            <div class="task-title">Crear Rutas /privacidad y /terminos</div>
+            <div class="task-desc">Construir páginas SSR con HTML limpio conteniendo cláusulas de WhatsApp Cloud API, no comercialización de datos y retención.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-10">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-10')"></div>
+          <div class="task-content">
+            <div class="task-title">Crear Ruta /eliminacion-de-datos</div>
+            <div class="task-desc">Página de instrucciones claras para que cualquier usuario solicite la supresión de sus datos y registros de chat.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-11">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-11')"></div>
+          <div class="task-content">
+            <div class="task-title">Eliminar Referencia Ficticia "Dashboard Privado Mockup"</div>
+            <div class="task-desc">En la sección <code>/agencia</code>, retirar la mención de mockup para que el revisor humano de Meta vea un producto operativo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 4: ARQUITECTURA MULTI-VPS Y OBO -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon icon-p4">4</div>
+          <div>
+            <h2 class="section-title">Arquitectura OBO para Modelo Single-Tenant (1 VPS/Cliente)</h2>
+            <div class="section-badge">Seguridad & Escalabilidad</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="task-item" id="task-12">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-12')"></div>
+          <div class="task-content">
+            <div class="task-title">Diseñar Gateway Central de Webhooks & Autenticación</div>
+            <div class="task-desc">Meta exige una sola URL de webhook por App. El Gateway central recibe todos los eventos de Meta y los redirige al VPS específico del cliente según su <code>waba_id</code> o <code>phone_number_id</code>.</div>
+            <div class="alert-box">⚠️ Jamás coloques tu Master App Secret de Meta dentro de los VPS individuales de tus clientes. Debe residir únicamente en tu Gateway central.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-13">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-13')"></div>
+          <div class="task-content">
+            <div class="task-title">Implementar Botón Embedded Signup v4</div>
+            <div class="task-desc">Sustituir el formulario manual de tokens en <code>CanalOficialClient.tsx</code> por el flujo pop-up de Facebook Login for Business v4 con <code>config_id</code>.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-14">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-14')"></div>
+          <div class="task-content">
+            <div class="task-title">Crear UI para Creación de Plantillas en Meta (Graph API)</div>
+            <div class="task-desc">El CRM actualmente sólo sincroniza plantillas (espejo). Para el permiso <code>whatsapp_business_management</code>, se debe agregar el formulario para enviar una nueva plantilla a revisión en Meta.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 5: PREPARACIÓN DEL APP REVIEW Y SCREENCAST -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-icon icon-p5">5</div>
+          <div>
+            <h2 class="section-title">Grabación y Envío de Screencasts (App Review)</h2>
+            <div class="section-badge">Advanced Access</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="task-item" id="task-15">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-15')"></div>
+          <div class="task-content">
+            <div class="task-title">Crear Cuenta de Test para el Revisor sin 2FA</div>
+            <div class="task-desc">Usuario con credenciales pre-cargadas (contactos, historial, plantillas activas) accesible públicamente.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-16">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-16')"></div>
+          <div class="task-content">
+            <div class="task-title">Grabar Video 1: whatsapp_business_messaging (Split-Screen)</div>
+            <div class="task-desc">1080p, MP4, 2 min. CRM a la izquierda, WhatsApp real a la derecha. Mostrar envío de plantilla y recepción inmediata en vivo con subtítulos en inglés.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-17">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-17')"></div>
+          <div class="task-content">
+            <div class="task-title">Grabar Video 2: whatsapp_business_management</div>
+            <div class="task-desc">1080p, MP4, 2-3 min. Mostrar flujo de Embedded Signup conectando una WABA y la creación de una nueva plantilla desde la UI del CRM.</div>
+          </div>
+        </div>
+        <div class="task-item" id="task-18">
+          <div class="checkbox-wrap"><input type="checkbox" class="custom-checkbox" onchange="toggleTask('task-18')"></div>
+          <div class="task-content">
+            <div class="task-title">Generar Actividad Previa en la API (5-10 llamadas)</div>
+            <div class="task-desc">Tener registros de telemetría reales en el App ID de Meta antes de enviar la solicitud.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const totalTasks = 18;
+
+    function updateProgress() {
+      let checkedCount = 0;
+      for (let i = 1; i <= totalTasks; i++) {
+        const checkbox = document.querySelector(`#task-${i} input[type="checkbox"]`);
+        if (checkbox && checkbox.checked) {
+          checkedCount++;
+          document.getElementById(`task-${i}`).classList.add('checked');
+        } else if (document.getElementById(`task-${i}`)) {
+          document.getElementById(`task-${i}`).classList.remove('checked');
+        }
+      }
+      const percent = Math.round((checkedCount / totalTasks) * 100);
+      document.getElementById('progress-bar').style.width = percent + '%';
+      document.getElementById('progress-percent').innerText = percent + '%';
+      localStorage.setItem('meta_checklist_state', JSON.stringify(getCheckedIds()));
+    }
+
+    function getCheckedIds() {
+      const checked = [];
+      for (let i = 1; i <= totalTasks; i++) {
+        const checkbox = document.querySelector(`#task-${i} input[type="checkbox"]`);
+        if (checkbox && checkbox.checked) checked.push(i);
+      }
+      return checked;
+    }
+
+    function toggleTask(taskId) {
+      updateProgress();
+    }
+
+    function resetProgress() {
+      if (confirm('¿Deseas reiniciar todos los puntos completados?')) {
+        for (let i = 1; i <= totalTasks; i++) {
+          const checkbox = document.querySelector(`#task-${i} input[type="checkbox"]`);
+          if (checkbox) checkbox.checked = false;
+        }
+        localStorage.removeItem('meta_checklist_state');
+        updateProgress();
+      }
+    }
+
+    // Load saved state
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('meta_checklist_state');
+      if (saved) {
+        try {
+          const ids = JSON.parse(saved);
+          ids.forEach(id => {
+            const checkbox = document.querySelector(`#task-${id} input[type="checkbox"]`);
+            if (checkbox) checkbox.checked = true;
+          });
+        } catch (e) {}
+      }
+      updateProgress();
+    });
+  </script>
+</body>
+</html>
