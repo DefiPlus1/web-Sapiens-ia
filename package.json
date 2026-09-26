@@ -2,6 +2,9 @@
   "name": "web-sapiens-ia-root",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "npm --prefix Sapiens-ia_FinishedWeb/sapiens-web run dev",
     "build": "npm --prefix Sapiens-ia_FinishedWeb/sapiens-web run build",
