@@ -38,7 +38,7 @@ Este proyecto (`web-Sapiens-ia`) utiliza:
 - **Domicilio Fiscal Obligatorio:** `Calle San Miguel Casa Nro 12-2 Sector San Miguel, Valle de la Pascua, Guárico, ZP 2350, Venezuela`.
 - **Canales Oficiales:**
   - Correo: `contacto@leoytriagoia.dev` (ruteado mediante Cloudflare).
-  - WhatsApp: `+58 422 4819607` (Prefijo Digitel válido).
+  - WhatsApp: `+58 412 4819608` (Prefijo Digitel válido).
 - **Consistencia NAP (Name, Address, Phone):** Cualquier mención pública de datos de contacto o razón social en footers, páginas legales o metadatos debe coincidir carácter por carácter con el documento RIF del SENIAT para aprobar revisiones de Meta.
 
 ---
@@ -58,3 +58,9 @@ Al recibir una tarea:
 4. **Implementar:** Escribir código limpio, modular y tipado con TypeScript.
 5. **Verificar:** Ejecutar build de Next.js (`npm run build`) para certificar cero errores de compilación o tipado.
 6. **Documentar:** Mantener actualizados `CLAUDE.md` y `plan.md`.
+
+---
+
+## 🛡️ Modo Plan / Investigación Predeterminado (Regla de Ejecución Explícita)
+- **Postura Predeterminada:** Si el usuario no indica de forma **expresa y explícita** que se ejecute el trabajo (ejemplos: *"ejecuta"*, *"aplica los cambios"*, *"procede con la ejecución"*, *"haz las modificaciones"*), el agente debe asumir siempre que se encuentra en **modo plan, investigación, análisis o consultoría**.
+- **Comportamiento Obligatorio:** Investigar, diagnosticar, proponer alternativas y documentar planes en artefactos sin modificar archivos de código del proyecto ni ejecutar comandos mutantes hasta recibir la orden explícita de ejecución.

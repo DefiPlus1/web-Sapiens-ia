@@ -11,8 +11,9 @@ const footerLinks = {
     compania: [
         { label: "Nuestra Visión", href: "/agencia" },
         { label: "Casos de Éxito", href: "/casos-de-exito" },
+        { label: "Portafolio de Leonardo", href: "/portafolio" },
         { label: "Insights IA", href: "/insights" },
-        { label: "Agendar Auditoría", href: "https://wa.me/584224819607" },
+        { label: "Agendar Auditoría", href: "https://wa.me/584124819608" },
     ],
     legal: [
         { label: "Política de Privacidad", href: "/privacidad" },
@@ -100,8 +101,8 @@ export default function Footer() {
                             </li>
                             <li className="flex items-start gap-2 text-xs text-slate-400 leading-relaxed">
                                 <Phone size={14} className="text-emerald-500 shrink-0 mt-0.5" />
-                                <a href="https://wa.me/584224819607" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
-                                    +58 422 4819607 (WhatsApp)
+                                <a href="https://wa.me/584124819608" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
+                                    +58 412 4819608 (WhatsApp)
                                 </a>
                             </li>
                             <li className="flex items-start gap-2 text-xs text-slate-400 leading-relaxed">
@@ -111,7 +112,7 @@ export default function Footer() {
                         </ul>
                         <div className="pt-3 border-t border-white/5">
                             <a
-                                href="https://wa.me/584224819607"
+                                href="https://wa.me/584124819608"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block text-center w-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 py-2 rounded-lg text-xs font-semibold hover:bg-emerald-500/25 transition-all duration-200"

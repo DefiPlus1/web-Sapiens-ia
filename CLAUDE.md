@@ -73,4 +73,4 @@ Toda referencia legal en el sitio debe reflejar con fidelidad:
 - **RIF:** V-17741920-2
 - **Domicilio:** Calle San Miguel Casa Nro 12-2 Sector San Miguel, Valle de la Pascua, Guárico, ZP 2350, Venezuela
 - **Correo Corporativo:** `contacto@leoytriagoia.dev`
-- **WhatsApp Oficial:** `+58 422 4819607`
+- **WhatsApp Oficial:** `+58 412 4819608`

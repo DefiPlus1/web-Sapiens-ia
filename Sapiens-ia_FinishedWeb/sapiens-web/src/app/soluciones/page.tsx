@@ -142,7 +142,7 @@ export default function SolucionesPage() {
                                         </div>
 
                                         <Link
-                                            href="https://wa.me/584224819607"
+                                            href="https://wa.me/584124819608"
                                             className="btn-glow inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold rounded-xl w-fit"
                                         >
                                             Solicitar Demo <ArrowRight size={16} />
@@ -192,7 +192,7 @@ export default function SolucionesPage() {
                                 Hablemos 45 minutos. Identificamos qué automatizar y cuánto dinero recuperas.
                             </p>
                             <a
-                                href="https://wa.me/584224819607"
+                                href="https://wa.me/584124819608"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn-glow relative z-10 inline-flex items-center gap-2 px-10 py-4 text-base font-bold rounded-xl"

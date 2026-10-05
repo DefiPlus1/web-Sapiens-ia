@@ -273,7 +273,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/584224819607"
+                href="https://wa.me/584124819608"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-glow px-10 py-4 text-base font-bold tracking-wide rounded-xl"

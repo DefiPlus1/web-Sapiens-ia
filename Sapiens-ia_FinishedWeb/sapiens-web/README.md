@@ -124,7 +124,7 @@ sapiens-web/
 ## 🔧 Personalización Rápida
 
 ### Cambiar número de WhatsApp del CTA
-Busca `wa.me/584224819607` en todo el proyecto y reemplaza con tu número real.
+Busca `wa.me/584124819608` en todo el proyecto y reemplaza con tu número real.
 
 ### Agregar fotos reales al dashboard placeholder
 En `src/app/agencia/page.tsx`, busca el comentario `{/* Center badge */}` y reemplaza la sección con un `<Image>` de tu mockup real.

@@ -227,7 +227,7 @@ export default function CasosDeExitoPage() {
                             Agenda una auditoría gratuita y descubre cuánto potencial sin explotar tiene tu operación.
                         </p>
                         <a
-                            href="https://wa.me/584224819607"
+                            href="https://wa.me/584124819608"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-glow inline-flex items-center gap-2 px-10 py-4 text-base font-bold rounded-xl"

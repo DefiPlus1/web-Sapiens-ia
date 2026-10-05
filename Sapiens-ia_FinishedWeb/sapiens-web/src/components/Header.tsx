@@ -16,6 +16,7 @@ const navLinks = [
         ],
     },
     { label: "Casos de Éxito", href: "/casos-de-exito" },
+    { label: "Portafolio", href: "/portafolio" },
     { label: "Agencia", href: "/agencia" },
     { label: "Insights", href: "/insights" },
 ];
@@ -98,7 +99,7 @@ export default function Header() {
                 {/* CTA */}
                 <div className="hidden md:flex items-center gap-4">
                     <a
-                        href="https://wa.me/584224819607"
+                        href="https://wa.me/584124819608"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-glow px-6 py-2.5 text-sm font-bold tracking-wide rounded-lg"
@@ -131,7 +132,7 @@ export default function Header() {
                         </Link>
                     ))}
                     <a
-                        href="https://wa.me/584224819607"
+                        href="https://wa.me/584124819608"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-glow block text-center px-6 py-3 text-sm font-bold rounded-lg mt-4"
